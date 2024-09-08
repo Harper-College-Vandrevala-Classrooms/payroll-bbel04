@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.csc.TestPayCalculator" tests="16" skipped="0" failures="0" errors="0" timestamp="2024-09-07T00:38:41" hostname="Bens-Air.attlocal.net" time="0.018">
+  <properties/>
+  <testcase name="CalculateSocialSecurityTaxForOneHundredDollars()" classname="com.csc.TestPayCalculator" time="0.006"/>
+  <testcase name="CalculatePayForFortyHoursWorked()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateTotalExpensesForVariousValues()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculatePayForFortyFiveHoursWorked()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculateNetPayForOneHourWorkedAndZeroDependents()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculateStateIncomeTaxForOneHundredDollars()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculatePayForNegativeHoursWorked()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateFederalIncomeTaxForOneHundredDollars()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculatePayForZeroHoursWorked()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateInsuranceDeductionForOneDependent()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculateInsuranceDeductionForTenDependents()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculatePayForThirtyAndOneQuarterHoursWorked()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateNetPayForTenHoursWorkedAndOneDependent()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateInsuranceDeductionForZeroDependents()" classname="com.csc.TestPayCalculator" time="0.001"/>
+  <testcase name="CalculateTotalExpensesForTenHoursWorkedandOneDependent()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <testcase name="CalculateInsuranceDeductionForThreeDependents()" classname="com.csc.TestPayCalculator" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
