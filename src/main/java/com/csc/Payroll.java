@@ -12,8 +12,6 @@ public class Payroll {
     System.out.println("Enter the number of dependents you have: ");
     int numberOfDependents = in.nextInt();
 
-    in.close();
-
     PayCalculator payCalculator = new PayCalculator();
     
     //calculate untaxed income
@@ -24,16 +22,19 @@ public class Payroll {
     double fedIncomeTax = payCalculator.federalIncomeTax(grossPay);
     double stateIncomeTax = payCalculator.stateIncomeTax(grossPay);
     double insuranceDeductions = payCalculator.insuranceExpense(numberOfDependents);
+    double lifeInsuranceExpense = payCalculator.lifeInsurance(numberOfDependents, in);
 
     //calculate total expenses
-    double totalExpenses = payCalculator.totalExpenses(socialSecurityTax, fedIncomeTax, stateIncomeTax, insuranceDeductions);
+    double totalExpenses = payCalculator.totalExpenses(socialSecurityTax, fedIncomeTax, stateIncomeTax, insuranceDeductions, lifeInsuranceExpense);
     //calculate net pay by deducting expenses from gross pay
     double netPay = payCalculator.netPay(grossPay, totalExpenses);
 
     reportGenerator report = new reportGenerator();
 
     //generate paystub report
-    String payrollOutput = report.payrollReport(numberOfHours, payCalculator.HOURLY_RATE, grossPay, socialSecurityTax, fedIncomeTax, stateIncomeTax, payCalculator.UNION_DUES, insuranceDeductions, totalExpenses, netPay);
+    String payrollOutput = report.payrollReport(numberOfHours, payCalculator.HOURLY_RATE, grossPay, socialSecurityTax, fedIncomeTax, stateIncomeTax, payCalculator.UNION_DUES, insuranceDeductions, lifeInsuranceExpense, totalExpenses, netPay);
     System.out.println(payrollOutput);
+    
+    in.close();
   }
 }

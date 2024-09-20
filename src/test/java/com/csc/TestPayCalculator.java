@@ -75,12 +75,12 @@ public class TestPayCalculator {
 
   @Test 
   void CalculateTotalExpensesForTenHoursWorkedandOneDependent() {
-    assertEquals(payCalculator.totalExpenses(10.07, 23.49, 8.39, 15.00), 66.95);
+    assertEquals(payCalculator.totalExpenses(10.07, 23.49, 8.39, 15.00, 5), 71.95);
   }
 
   @Test 
   void CalculateTotalExpensesForVariousValues() {
-    assertEquals(payCalculator.totalExpenses(15.32, 20.15, 5.33, 15.00), 65.80);
+    assertEquals(payCalculator.totalExpenses(15.32, 20.15, 5.33, 15.00, 15), 80.80);
   }
 
   @Test

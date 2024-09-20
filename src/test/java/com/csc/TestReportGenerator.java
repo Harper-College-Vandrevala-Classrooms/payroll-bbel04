@@ -27,10 +27,11 @@ public class TestReportGenerator {
     double stTax = 33.56;
     double union = 10.00;
     double insurance = 15.00;
-    double deductions = socSec + fedTax + stTax + union + insurance;
+    double lifeInsurance = 5.00;
+    double deductions = socSec + fedTax + stTax + union + insurance + lifeInsurance;
     double net = gross - deductions;
 
-    String result = report.payrollReport(hours, rate, gross, socSec, fedTax, stTax, union, insurance, deductions, net);
+    String result = report.payrollReport(hours, rate, gross, socSec, fedTax, stTax, union, insurance, lifeInsurance, deductions, net);
 
         assertTrue(result.contains("Hours Worked:    40.00"));
         assertTrue(result.contains("Hourly Rate:    16.78 $/hr"));
@@ -39,8 +40,9 @@ public class TestReportGenerator {
         assertTrue(result.contains("Federal Income Tax: $  93.97"));
         assertTrue(result.contains("State Income Tax: $  33.56"));
         assertTrue(result.contains("Union Dues: $  10.00"));
-        assertTrue(result.contains("Insurance Premium: $  15.00"));
-        assertTrue(result.contains("Total Deductions: $ 192.80"));
-        assertTrue(result.contains("Net Pay: $ 478.40"));
+        assertTrue(result.contains("Insurance Expense: $  15.00"));
+        assertTrue(result.contains("Life Insurance Expense: $   5.00"));
+        assertTrue(result.contains("Total Deductions: $ 197.80"));
+        assertTrue(result.contains("Net Pay: $ 473.40"));
   }
 }
